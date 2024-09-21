@@ -1,5 +1,5 @@
 ## Visit [Imagine your Device](https://main--imagine-your-device.netlify.app/)
-> Made with react and openAPIs.
+> Made with React and OpenAI.
 
 ![Dashboard](/public/layout.jpg "Dashboard")
 ## Quickstart
