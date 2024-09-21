@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMemory, faMobileAlt, faBatteryFull, faCamera } from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./SearchBar.css";
@@ -16,23 +15,30 @@ const phoneDetails = {
     camera: '64MP + 12MP + 5MP Triple Camera',
   };
 const SearchBar = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  // const [searchResults, setSearchResults] = useState([]);
-  // const [spec, setSpec] = useState({});
-  const spec = {}
-  const [options] = useState(["Device with large screen size", "High performance devices", "Super zoom with macro smartphone", "Compact yet high performance smartphone"]);
-  // const [isSearched, setIsSearched] = useState(false);
-  // const [imageUrl, setImageUrl] = useState("./imageai.png");
-  const imageUrl = "./imageai.png"
-  // const [loading, setLoading] = useState(false);
+  const searchTerm = "";
+  const spec = {};
+  const options = ["Device with large screen size", "High performance devices", "Super zoom with macro smartphone", "Compact yet high performance smartphone"];
+  const imageUrl = "./imageai.png";
   const loading = false;
-  /*const generateImage = async () => {
+  const handleInputChange = (e) => {};
+  const handleKeyPress = (e) => {};
+  const handleSearchClick = () => {}
+  /**
+   * WORKING DYNAMIC CODE WITH OPENAPIs
+   * 
+   * const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [spec, setSpec] = useState({});
+  const [options, setOptions] = useState(["Device with large screen size", "High performance devices", "Super zoom with macro smartphone", "Compact yet high performance smartphone"]);
+  const [isSearched, setIsSearched] = useState(false);
+  const [imageUrl, setImageUrl] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const generateImage = async () => {
     setLoading(true);
-    console.log(searchTerm);
     const prompt = searchTerm;
     try {
-      // const response = await fetch('http://localhost:5001/api/generate-image', {
-        const response = await fetch('http://picsum.photos/300/400', {
+      const response = await fetch('http://localhost:5001/api/generate-image', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -40,16 +46,15 @@ const SearchBar = () => {
         body: JSON.stringify({ prompt }),
       });
       const data = await response.json();
-
       setImageUrl(data.url);
     } catch (error) {
       console.error('Error:', error);
     } finally {
       setLoading(false);
     }
-  };*/
-  
-  /*useEffect(() => {
+  };
+
+  useEffect(() => {
     const fetchData = async () => {
       await fetch(`http://localhost:5000/api/suggested-prompts`)
         .then((res) => res.json())
@@ -62,22 +67,22 @@ const SearchBar = () => {
     }, 5000);
 
     return () => clearTimeout(timer);
-  });*/
+  });
 
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
   };
   const handleKeyPress = (e) => {
-    /*if (e.key === "Enter") {
+    if (e.key === "Enter") {
       handleSearchClick();
-    }*/
+    }
   };
   const handleSearchClick = () => {
-    /*if (searchTerm.trim() === "") return;
+    if (searchTerm.trim() === "") return;
     
-    // setIsSearched(true);
+    setIsSearched(true);
     // Suggestion API   
- 
+
     // Simulate API call with a fake endpoint
     fetch(`http://localhost:5000/api/product-specifications?prompt=${searchTerm}`)
       .then((response) => response.json())
@@ -91,11 +96,11 @@ const SearchBar = () => {
       });
 
       generateImage();
-      */
+
   };
+  */
 
   return (
-    
     <div className="search-bar-container">
       <div className="imagine-text cedarville-cursive-regular">#imagineyourdevice</div>
       <div className="search-bar">
