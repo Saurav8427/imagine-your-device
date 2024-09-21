@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -21,7 +21,7 @@ const phoneDetails = {
   camera: "64MP + 12MP + 5MP Triple Camera",
 };
 const SearchBar = () => {
-  const searchTerm = "";
+  const [searchTerm, setSearchTerm] = useState("");
   const spec = {};
   const options = [
     "Device with large screen size",
@@ -31,7 +31,9 @@ const SearchBar = () => {
   ];
   const imageUrl = "./imageai.png";
   const loading = false;
-  const handleInputChange = (e) => {};
+  const handleInputChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
   const handleKeyPress = (e) => {};
   const handleSearchClick = () => {};
   /* 
