@@ -1,7 +1,9 @@
-## Visit [Imagine your Device](https://master--sales-ui-dashboard.netlify.app)
+## Visit [Imagine your Device](https://main--imagine-your-device.netlify.app/)
 > Made with react and openAPIs.
 
 ![Dashboard](/public/layout.png "Dashboard")
+![Dashboard](/public/layout01.png "Dashboard")
+![Dashboard](/public/layout02.png "Dashboard")
 ## Quickstart
 
 - Run `npm install` to install required dependencies.
