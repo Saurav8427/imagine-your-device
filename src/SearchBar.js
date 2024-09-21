@@ -236,7 +236,7 @@ const SearchBar = () => {
                   </li>
                   <li className="mb-3">
                     <button type="button" class="btn btn-light">
-                      Request for Innovation
+                      Innovate again
                     </button>
                   </li>
                 </ul>
