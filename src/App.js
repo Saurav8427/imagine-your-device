@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import SearchBar from "./SearchBar";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="">
+      {/* <SearchBar options={options} /> */}
+      <nav class="navbar navbar-light p-2">
+        <a class="navbar-brand" href="#">
+          <img src="./logo.png" width="140" height="30" alt="" />
         </a>
-      </header>
+      </nav>
+      <SearchBar />
+      {/* <MobilePhoneInfo {...phoneDetails} /> */}
     </div>
   );
-}
+};
 
 export default App;
