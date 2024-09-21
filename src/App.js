@@ -8,7 +8,7 @@ const App = () => {
     <div className="">
       {/* <SearchBar options={options} /> */}
       <nav class="navbar navbar-light p-2">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
           <img src="./logo.png" width="140" height="30" alt="" />
         </a>
       </nav>

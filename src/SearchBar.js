@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,19 +17,22 @@ const phoneDetails = {
   };
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
-  const [spec, setSpec] = useState({});
-  const [options, setOptions] = useState(["Device with large screen size", "High performance devices", "Super zoom with macro smartphone", "Compact yet high performance smartphone"]);
-  const [isSearched, setIsSearched] = useState(false);
-  const [imageUrl, setImageUrl] = useState(null);
-  const [loading, setLoading] = useState(false);
-
-  const generateImage = async () => {
+  // const [searchResults, setSearchResults] = useState([]);
+  // const [spec, setSpec] = useState({});
+  const spec = {}
+  const [options] = useState(["Device with large screen size", "High performance devices", "Super zoom with macro smartphone", "Compact yet high performance smartphone"]);
+  // const [isSearched, setIsSearched] = useState(false);
+  // const [imageUrl, setImageUrl] = useState("./imageai.png");
+  const imageUrl = "./imageai.png"
+  // const [loading, setLoading] = useState(false);
+  const loading = false;
+  /*const generateImage = async () => {
     setLoading(true);
     console.log(searchTerm);
     const prompt = searchTerm;
     try {
-      const response = await fetch('http://localhost:5001/api/generate-image', {
+      // const response = await fetch('http://localhost:5001/api/generate-image', {
+        const response = await fetch('http://picsum.photos/300/400', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -37,15 +40,16 @@ const SearchBar = () => {
         body: JSON.stringify({ prompt }),
       });
       const data = await response.json();
+
       setImageUrl(data.url);
     } catch (error) {
       console.error('Error:', error);
     } finally {
       setLoading(false);
     }
-  };
+  };*/
   
-  useEffect(() => {
+  /*useEffect(() => {
     const fetchData = async () => {
       await fetch(`http://localhost:5000/api/suggested-prompts`)
         .then((res) => res.json())
@@ -58,20 +62,20 @@ const SearchBar = () => {
     }, 5000);
 
     return () => clearTimeout(timer);
-  });
+  });*/
 
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
   };
   const handleKeyPress = (e) => {
-    if (e.key === "Enter") {
+    /*if (e.key === "Enter") {
       handleSearchClick();
-    }
+    }*/
   };
   const handleSearchClick = () => {
-    if (searchTerm.trim() === "") return;
+    /*if (searchTerm.trim() === "") return;
     
-    setIsSearched(true);
+    // setIsSearched(true);
     // Suggestion API   
  
     // Simulate API call with a fake endpoint
@@ -87,7 +91,7 @@ const SearchBar = () => {
       });
 
       generateImage();
-
+      */
   };
 
   return (
@@ -116,17 +120,6 @@ const SearchBar = () => {
         </div>
       </div>
 
-      {/* Display search results below the search bar */}
-      {searchResults.length > 0 && (
-        <div className="search-results">
-          <h3>Search Results:</h3>
-          <ul>
-            {searchResults.map((result) => (
-              <li key={result.id}>{result.title}</li>
-            ))}
-          </ul>
-        </div>
-      )}
       {loading && <div className="loader mt-4"></div>}
       {<div className="row mt-4 p-4 bg-black text-light">
         <h3 className='text-center my-4 cedarville-cursive-regular'>Bringing your #imagination to life</h3>
@@ -135,7 +128,7 @@ const SearchBar = () => {
         {/* <div className="col-md-1 mt-4 text-center"></div> */}
         <div className="col-md-6 my-4 text-center">
           <img
-            src="./imageai.png"
+            src={imageUrl}
             alt="Galaxy"
             className="img-fluid"
             style={{ maxWidth: '50%' }}
