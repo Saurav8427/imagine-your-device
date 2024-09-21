@@ -7,11 +7,11 @@ const App = () => {
   return (
     <div className="">
       {/* <SearchBar options={options} /> */}
-      <nav class="navbar navbar-light p-2">
+      {/* <nav class="navbar navbar-light p-2">
         <a class="navbar-brand" href="/">
           <img src="./logo.png" width="140" height="30" alt="" />
         </a>
-      </nav>
+      </nav> */}
       <SearchBar />
       {/* <MobilePhoneInfo {...phoneDetails} /> */}
     </div>

@@ -1,169 +1,253 @@
 /* Center the whole container */
 .search-bar-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* height: 60vh; */
-    margin-top: 20px;
-    font-family: "Inter", system-ui;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-family: "Inter", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Cursive text styling for #imagineyourdevice */
+.imagine-text {
+  font-family: "Cursive", sans-serif;
+  font-size: 56px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Search bar styling */
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Placeholder styling above input */
+.placeholder-above {
+  font-size: 18px;
+  color: #999;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* Input container */
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Input field styling */
+.search-bar input {
+  width: 100%;
+  padding: 15px 50px 15px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 18px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Search icon button styling */
+.search-icon-button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-70%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+}
+
+.search-icon-button:hover {
+  color: #333;
+}
+
+/* Options container */
+.options {
+  display: flex;
+  justify-content: space-around;
+  width: 175%;
+  gap: 10px;
+}
+
+/* Buttons styling */
+.options button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #f8f8f8;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex-grow: 1;
+}
+
+.options button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Search results container */
+.search-results {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.search-results h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.search-results ul {
+  list-style: none;
+  padding: 0;
+}
+
+.search-results ul li {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.cursive-text {
+  font-family: 'Cursive', sans-serif;
+  font-size: 24px;
+  color: #555;
+}
+
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-100 {
+  font-family: "Inter", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Loader styling */
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3498db;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+
+.marginfix {
+  margin-top: 100px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.navbar-toggler {
+  border:none;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  /* Cursive text styling for #imagineyourdevice */
-  .imagine-text {
-    font-family: "Cursive", sans-serif;
-    font-size: 56px;
-    margin-bottom: 20px;
-    color: #555;
+  100% {
+    transform: rotate(360deg);
   }
-  
-  /* Search bar styling */
-  .search-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
-  }
-  
-  /* Placeholder styling above input */
-  .placeholder-above {
-    font-size: 18px;
-    color: #999;
-    margin-bottom: 5px;
-    font-weight: 500;
-  }
-  
-  /* Input container */
-  .input-container {
-    position: relative;
-    width: 100%;
-  }
-  
-  /* Input field styling */
-  .search-bar input {
-    width: 100%;
-    padding: 15px 50px 15px 15px; /* Extra padding on the right for the search icon */
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    font-size: 18px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  /* Search icon button styling */
-  .search-icon-button {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-70%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    color: #666;
-  }
-  
-  .search-icon-button:hover {
-    color: #333;
-  }
-  
-  /* Options container */
+}
+
+/* Row styling with no gutter */
+.row {
+  --bs-gutter-x: 0rem !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
   .options {
-    display: flex;
-    justify-content: space-around;
-    width: 175%;
-    gap: 10px;
+    width: 150%;
   }
-  
-  /* Buttons styling */
+
+  .imagine-text {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .options {
+    width: 120%;
+    flex-direction: column;
+  }
+
+  .imagine-text {
+    font-size: 36px;
+  }
+
+  .search-bar input {
+    font-size: 16px;
+    padding: 12px 40px 12px 12px;
+  }
+
   .options button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    background-color: #f8f8f8;
-    border: none;
-    border-radius: 12px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    flex-grow: 1;
+    font-size: 12px;
   }
-  
-  .options button:hover {
-    background-color: #e0e0e0;
+}
+
+@media (max-width: 480px) {
+  .options {
+    width: 100%;
+    flex-direction: column;
   }
-  
-  /* Search results container */
-  .search-results {
-    margin-top: 20px;
-    text-align: left;
+
+  .navbar-toggler {
+    font-size: 16px;
   }
-  
-  .search-results h3 {
+
+  .imagine-text {
+    font-size: 28px;
+  }
+
+  .search-bar input {
+    font-size: 12px;
+    padding: 8px 24px 8px 8px;
+  }
+
+  .options button {
+    font-size: 10px;
+    padding: 2px;
+  }
+
+  h2 {
     font-size: 18px;
-    margin-bottom: 10px;
   }
   
-  .search-results ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .search-results ul li {
-    background-color: #f9f9f9;
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-  }
-  
-  .cursive-text {
-    font-family: 'Cursive', sans-serif;
-    font-size: 24px;
-    color: #555;
-  }
-  
-  .cedarville-cursive-regular {
-    font-family: "Cedarville Cursive", cursive;
-    font-weight: 400;
-    font-style: normal;
+  p {
+    font-size: 12px;
   }
 
-  .inter-100 {
-    font-family: "Inter", system-ui;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .loader {
-    border: 10px solid #f3f3f3;
-    border-top: 10px solid #3498db;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    animation: spin 1s linear infinite;
+  li {
+    font-size: 10px;
   }
 
-    .marginfix {
-        margin-top: 100px;
-    }
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  } 
-
-  .row {
-    --bs-gutter-x: 0rem !important;
+  .btn {
+    font-size: 10px;
   }
+
+  .placeholder-above {
+    font-size: 14px;
+  }
+}
