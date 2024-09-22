@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./SearchBar.css";
+import 'animate.css';
 const phoneDetails = {
   image:
     "https://images.samsung.com/is/image/samsung/p6pim/uk/sm-a256bzydeub/gallery/uk-galaxy-a25-5g-sm-a256-sm-a256bzydeub-539504418?$650_519_PNG$",
@@ -147,11 +148,11 @@ const SearchBar = () => {
         </div>
       </nav>
       <div className="search-bar-container">
-        <div className="imagine-text cedarville-cursive-regular">
+        <div className="imagine-text  cedarville-cursive-regular">
           #imagineyourdevice
         </div>
         <div className="search-bar">
-          <div className="placeholder-above .inter-100">
+          <div className="animate__animated animate__fadeInDown placeholder-above .inter-100">
             What device are you imagining?
           </div>
           <div className="input-container">
@@ -165,7 +166,7 @@ const SearchBar = () => {
               <FontAwesomeIcon icon={faSearch} />
             </button>
           </div>
-          <div className="options mb-4">
+          <div className="options mb-4 animate__animated animate__fadeInUp">
             {options.map((option, index) => (
               <button key={index} onClick={() => console.log(option)}>
                 <span>{option.trim()}</span>
@@ -183,17 +184,17 @@ const SearchBar = () => {
             <div className="row align-items-center my-4">
               {/* Phone Image */}
               {/* <div className="col-md-1 mt-4 text-center"></div> */}
-              <div className="col-md-6 my-4 text-center">
+              <div className="col-md-6 my-4 text-center ">
                 <img
                   src={imageUrl}
                   alt="Galaxy"
-                  className="img-fluid"
+                  className="img-fluid animate__animated animate__fadeInUp"
                   style={{ maxWidth: "50%" }}
                 />
               </div>
               {/* Phone Description and Features */}
               {/* <div className="col-md-1 mt-4 text-center"></div> */}
-              <div className="col-md-6">
+              <div className="col-md-6 animate__animated animate__fadeInUp">
                 <h2 className="mb-3">Specifications</h2>
                 <p className="mb-4">
                   Smartphone set in modern landscape, amazing blue display, slim
